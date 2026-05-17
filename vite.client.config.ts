@@ -7,6 +7,9 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [tailwindcss(), react(), tsconfigPaths()],
   base: "/Nova-University/",
+  define: {
+    "process.env.BASE_URL": JSON.stringify("/Nova-University/"),
+  },
   build: {
     outDir: "dist/client",
     emptyOutDir: true,
